@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light" >
+
+    <com.printto.printmov.wearpet.RenderView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:gravity="center">
+
+            <Button android:layout_height="wrap_content"
+                android:id="@+id/feedButton"
+                android:text="Feed"
+                android:layout_width="50px"
+                android:textSize="10px"
+                android:onClick="feedBtnClicked" />
+
+            <Button android:layout_height="wrap_content"
+                android:id="@+id/careButton"
+                android:layout_width="50px"
+                android:textSize="10px"
+                android:layout_toEndOf="@id/feedButton"
+                android:text="Care"
+                android:onClick="careBtnClicked" />
+
+            <Button android:layout_height="wrap_content"
+                android:id="@+id/battleButton"
+                android:layout_width="50px"
+                android:textSize="10px"
+                android:layout_toEndOf="@id/careButton"
+                android:text="Battle"
+                android:onClick="battleBtnClicked" />
+
+            <Button android:layout_height="wrap_content"
+                android:id="@+id/statsButton"
+                android:layout_width="50px"
+                android:textSize="10px"
+                android:layout_toEndOf="@id/battleButton"
+                android:text="Status"
+                android:onClick="statusBtnClicked" />
+
+    </LinearLayout>
+
+</RelativeLayout>
